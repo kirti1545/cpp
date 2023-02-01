@@ -1,0 +1,32 @@
+/*Write a program to calculate the total salary of a person. The user has to enter the basic salary (an integer) and the grade (an uppercase character), and depending upon which the total salary is calculated as -
+    totalSalary = basic + hra + da + allow – pf */
+    //code
+    #include<iostream>
+#include<cmath>
+using namespace std;
+int main(){
+	double basic;
+	char grade;
+	double total_salary;
+    cin>>basic>>grade;
+	double hra = (20*basic)/100;
+	double da=(50*basic)/100;
+	double pf=(11*basic)/100;
+	if(grade == 'A'){
+		double allow = 1700;
+		total_salary = basic + hra + da + allow - pf;
+		cout<<int(round(total_salary))<<endl;
+	}
+	else{
+	if(grade == 'B'){
+		double allow = 1500;
+		total_salary = hra + da + basic + allow - pf;
+		cout<<int(round(total_salary))<<endl;
+	}
+	else{
+		double allow = 1300;
+		total_salary = hra + da + basic + allow - pf;
+		cout<<int(round(total_salary))<<endl;
+	}
+   }
+  }
